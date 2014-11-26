@@ -1,0 +1,22 @@
+<%= link_to 'New Algorithm Config', new_algorithm_path, class: "button" %>
+
+<table class="table">
+   <thead>
+     <tr>
+       <th>Name</th>
+       <th>Actions</th>      
+     </tr>
+   </thead>
+   <tbody>
+      <% @algs.each do |alg| %>         
+         <tr>
+            <td>
+               <%= alg.name%>
+            </td>
+            <td>
+               <%= link_to "Edit", edit_algorithm_path(alg), class: "button"%>
+            </td>
+         </tr>
+      <% end %>
+   </tbody>
+</table>
